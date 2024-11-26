@@ -5,12 +5,14 @@
 :root {
     --black: #0a0a0a;
     --white: #ededed;
+    --gray: #b6b4b4;
+    --gray-light: #EBEBEB;
+    --gray-dark: #362e2e;
     --red: #882323;
     --green: #2b6442;
     --green-light: #4eb36d;
     --primary: #693169;
-    --gray: #b6b4b4;
-    --dark-gray: #362e2e;
+    --primary-hover: #491149;
 }
 
 @media (prefers-color-scheme: dark) {
