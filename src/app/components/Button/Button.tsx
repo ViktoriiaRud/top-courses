@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 
 export const Button = ({appearance, arrow = 'none', children, className, ...props}:ButtonProps):JSX.Element => {
-    return (
+    return <>
         <button
         className={cn(styles.button, classNames, {
             [styles.primary]: appearance =='primary',
@@ -19,5 +19,5 @@ export const Button = ({appearance, arrow = 'none', children, className, ...prop
             })}>
                 </span>}
         </button>
-    )
+    </>
 }
