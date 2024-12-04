@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import styles from './Button.module.css';
 import {ButtonProps} from './Button.props';
 import cn from 'classnames';
+import Arrow from './Arrow';
 
 
 export const Button = ({appearance, arrow = 'none', children, className, ...props}:ButtonProps):JSX.Element => {
@@ -17,6 +18,7 @@ export const Button = ({appearance, arrow = 'none', children, className, ...prop
             {arrow !== 'none' && <span className={cn(styles.arrow, {
                 [styles.down] : arrow == 'down'
             })}>
+                <Arrow/>
                 </span>}
         </button>
     </>
