@@ -5,12 +5,12 @@ import cn from 'classnames';
 import Arrow from './Arrow';
 
 
-export const Button = ({appearance, arrow = 'none', children, className, ...props}:ButtonProps):JSX.Element => {
+export const Button = ({variant, arrow = 'none', children, className, ...props}:ButtonProps):JSX.Element => {
     return <>
         <button
         className={cn(styles.button, classNames, {
-            [styles.primary]: appearance =='primary',
-            [styles.ghost]: appearance =='ghost',
+            [styles.primary]: variant =='primary',
+            [styles.ghost]: variant =='ghost',
         })}
         {...props}
         >

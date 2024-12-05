@@ -11,24 +11,24 @@
 }
 
 .primary {
-    color: var(--white);
-    background-color: var(--primary);
+    color: white;
+    background-color: #693169;
 }
 
 .primary:hover {
-    background-color: var(--primary-hover);
+    background-color: #491149;
 }
 
 .ghost {
-    color: var(--black);
+    color: #000000;
     background-color: none;
-    border: 1px solid var(--gray-light);
+    border: 1px solid #EBEBEB;
 }
 
 .ghost:hover {
-    color: var(--white);
-    background-color: var(--primary);
-    border: 1px solid var(--gray-light);
+    color: #ededed;
+    background-color: #693169;
+    border: 1px solid #EBEBEB;
 }
 
 .arrow {
@@ -43,5 +43,5 @@
 
 .primary svg,
 .ghost:hover svg{
-    stroke: var(--white);
+    stroke: #ededed;
 }

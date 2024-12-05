@@ -1,5 +1,5 @@
 import { Metadata} from 'next';
-import { nunito } from './fonts/font';
+import { nunito } from './theme/fonts/font';
 import './globals.css';
 
 export const metadata: Metadata = {

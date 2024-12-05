@@ -1,6 +1,7 @@
 import React from "react";
 import './globals.css';
-import { roboto_mono } from './fonts/font';
+import './theme/globalStyles';
+import { roboto_mono } from './theme/fonts/font';
 import { Button, HTag } from "./components";
 
 
@@ -9,8 +10,8 @@ export default function Page() {
     <>
       <div>
         <HTag tag='h3'>TEXT-TEST</HTag>
-        <Button appearance='primary' arrow='right'>Click me </Button>
-        <Button appearance='ghost' arrow='down'>Click me </Button>
+        <Button variant='primary' arrow='right'>Click me </Button>
+        <Button variant='ghost' arrow='down'>Click me </Button>
         <h1 className={`${roboto_mono.className} text-center text-xl font-bold text-gray-900 mb-4`}>Profession designer from 0 to PRO</h1>
         <p className="text-center text-base text-gray-900 mb-4">Students will master not only the hard skills necessary to work as a web designer,
          but also soft skills - skills that will allow them to effectively interact in a team with managers,
