@@ -2,7 +2,7 @@ import React from "react";
 import './globals.css';
 import './theme/globalStyles';
 import { roboto_mono } from './theme/fonts/font';
-import { Button, HTag } from "./components";
+import { Button, HTag, Tag } from "./components";
 
 
 export default function Page() {
@@ -16,6 +16,9 @@ export default function Page() {
         <p className="text-center text-base text-gray-900 mb-4">Students will master not only the hard skills necessary to work as a web designer,
          but also soft skills - skills that will allow them to effectively interact in a team with managers,
          developers and marketers. Graduates of the faculty can successfully compete with middle-level web designers.</p>
+         <Tag size="s" color='primary'>Primary</Tag>
+         <Tag size="m" color='green'>Green</Tag>
+         <Tag size="m" color="red">Red</Tag>
       </div>
     </>
   )
