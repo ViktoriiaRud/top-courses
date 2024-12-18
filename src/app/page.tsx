@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import './globals.css';
 import './theme/globalStyles';
 import { roboto_mono } from './theme/fonts/font';
@@ -6,6 +7,7 @@ import { Button, HTag, Rating, Tag } from "./components";
 
 
 export default function Page() {
+  const [rating, setRating] = useState<number>(4);
   return (
     <>
       <div>
@@ -19,7 +21,7 @@ export default function Page() {
          <Tag size="s" color='primary'>Primary</Tag>
          <Tag size="m" color='green'>Green</Tag>
          <Tag size="m" color="red">Red</Tag>
-         <Rating rating={4}/>
+         <Rating rating={rating} isEditable setRating={setRating}/>
       </div>
     </>
   )

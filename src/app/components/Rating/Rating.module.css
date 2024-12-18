@@ -1,8 +1,12 @@
-.filled {
+.filled svg{
     fill: #693169;
 }
 
-.star {
+.star svg{
     display: inline-block;
     margin-right: 5px;
+}
+
+.editable {
+    cursor: pointer;
 }

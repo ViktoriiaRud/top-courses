@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, KeyboardEvent } from 'react';
 import { RatingProps } from './Rating.props';
 import styles from './Rating.module.css';
 import cn from 'classnames';
@@ -15,16 +15,45 @@ export const Rating = ({ isEditable = false, rating, setRating, ...props }: Rati
   const constructRating = (currentRating: number) => {
     const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
       return (
-        <Star
-          key={i}
+        <span
+        key={i}
           className={cn(styles.star, {
             [styles.filled]: i < currentRating,
+            [styles.editable]: isEditable
           })}
+          onMouseEnter={() => changeDispay(i + 1)}
+          onMouseLeave={() => changeDispay(rating)}
+          onClick={() => onClick(i + 1)}>
+           <Star
+          tabIndex={isEditable ? 0 : -1}
+          onKeyDown={(e: KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
         />
+        </span>
       );
     });
     setRatingArray(updatedArray);
   };
+
+  const changeDispay = (i: number) => {
+    if(!isEditable) {
+      return;
+    }
+    constructRating(i)
+  }
+
+  const onClick = (i: number) => {
+    if(!isEditable || !setRating) {
+      return;
+    }
+    setRating(i);
+  }
+
+  const handleSpace = (i: number, e: KeyboardEvent<SVGElement>) => {
+    if(e.code != 'Space' || !setRating) {
+      return;
+    }
+    setRating(i);
+  }
 
   return (
     <div {...props}>
