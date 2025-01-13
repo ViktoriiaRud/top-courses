@@ -4,13 +4,13 @@ import './globals.css';
 import './theme/globalStyles';
 import { roboto_mono } from './theme/fonts/font';
 import { Button, HTag, Rating, Tag } from "./components";
-import { Layout } from "../layout/Layout";
+import { Layout, withLayout } from "../layout/Layout";
 
 
-export default function Page() {
+function Page(): JSX.Element {
   const [rating, setRating] = useState<number>(4);
   return (
-      <Layout>
+      <>
          <div>
         <HTag tag='h3'>TEXT-TEST</HTag>
         <Button variant='primary' arrow='right'>Click me </Button>
@@ -24,6 +24,9 @@ export default function Page() {
          <Tag size="m" color="red">Red</Tag>
          <Rating rating={rating} isEditable setRating={setRating}/>
       </div>
-      </Layout>
+      </>
   )
 }
+
+
+export default withLayout(Page);
