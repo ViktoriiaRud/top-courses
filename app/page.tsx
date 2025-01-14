@@ -4,7 +4,7 @@ import './globals.css';
 import './theme/globalStyles';
 import { roboto_mono } from './theme/fonts/font';
 import { Button, HTag, Rating, Tag } from "./components";
-import { Layout, withLayout } from "../layout/Layout";
+import { withLayout } from "../layout/Layout";
 
 
 function Page(): JSX.Element {
